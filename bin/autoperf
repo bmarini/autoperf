@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#--
+# Copyright (C)2008 Ilya Grigorik
+# You can redistribute this under the terms of the Ruby license
+#++
+
+require 'optparse'
+require 'ruport'
+require 'autoperf'
+
+trap("INT") {
+  puts "Terminating tests."
+  Process.exit
+}
+
+AutoPerf.new()
